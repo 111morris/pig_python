@@ -23,5 +23,13 @@ while try:
 max_score = 50
 player_scores = [0 for _ in range(players)]
 
-print(player_scores)
+while max(player_scores) < max_score:
+    should_roll = input("Would you like to roll (y)? ")
+    if should_roll.lower() != "y":
+        break
+    value = roll()
+    if value == 1: 
+        print("You rolled a 1! Turn done!")
+    else: 
+        print("Y")
 
